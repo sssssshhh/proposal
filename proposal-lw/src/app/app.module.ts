@@ -10,7 +10,7 @@ import { HeaderComponent } from './navigation/header/header.component';
 import { FooterComponent } from './navigation/footer/footer.component';
 import { MainComponent } from './navigation/main/main.component';
 import { LoginComponent } from './login/login/login.component';
-
+import { MenubarModule } from 'primeng/menubar';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,8 @@ import { LoginComponent } from './login/login/login.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MenubarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
