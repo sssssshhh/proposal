@@ -39,6 +39,6 @@ export class HeaderComponent implements OnInit {
           {
           label: '로그인',
           }
-        ];
+        ] as MenuItem[];
       }
 }
