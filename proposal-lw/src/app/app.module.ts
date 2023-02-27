@@ -11,6 +11,7 @@ import { FooterComponent } from './navigation/footer/footer.component';
 import { MainComponent } from './navigation/main/main.component';
 import { LoginComponent } from './login/login/login.component';
 import { MenubarModule } from 'primeng/menubar';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { MenubarModule } from 'primeng/menubar';
     BrowserModule,
     AppRoutingModule,
     MenubarModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,32 +12,21 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-      this.items = [
+    this.items = [
           {
-              label: '브릿센트 소개',
-              items: [
-                  {label: 'ABOUT US'},
-                  {label: 'WHY US'}
-              ]
+              label: '메뉴1',
           },
           {
-              label: '1:1 영어수업'
+              label: '메뉴2'
           },
           {
-            label: '콘텐츠',
-            items: [
-                {label: 'BLOG'},
-            ]
-        },
-        {
-          label: '수강후기',
-          items: [
-              {label: '수강생 후기'},
-              {label: '수강생 인터뷰'}
-            ]
+            label: '메뉴3',
           },
           {
-          label: '로그인',
+          label: '메뉴4',
+          },
+          {
+          label: '메뉴5',
           }
         ] as MenuItem[];
       }
