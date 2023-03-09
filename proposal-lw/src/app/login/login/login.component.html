@@ -1,1 +1,14 @@
-<p>login works!</p>
+<div class="login">
+    <form>
+        <span class="login-input p-float-label">
+            <input [(ngModel)]="id" type="text" pInputText placeholder="your id"> 
+            <label for="float-input">Username</label>
+        </span>
+        <span class="login-input p-float-label">
+            <input [(ngModel)]="password" type="password" pInputText placeholder="your password"> 
+            <label for="float-password">Password</label>
+        </span>
+
+        <input type="submit" value="Submit" (click)="submit()">
+    </form>
+</div>
