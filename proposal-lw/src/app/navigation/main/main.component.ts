@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UseStore } from 'src/store/user.store';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userStore: UseStore){
 
-  ngOnInit(): void {
   }
 
+  ngOnInit(): void {
+    // console.log(this.userStore.testSubject)
+  }
 }

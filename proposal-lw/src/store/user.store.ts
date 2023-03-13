@@ -1,15 +1,25 @@
-import { Injectable } from "@angular/core";
-import { BehaviorSubject } from "rxjs";
+import { Injectable, OnInit } from "@angular/core";
+import { Observable } from "rxjs";
+import { Store } from "./store";
 
 @Injectable()
-export class UserStore {
-  private _name: BehaviorSubject<string> = new BehaviorSubject('none');
-
-  get name(): string {
-    return this._name.getValue();
+export class UseStore implements OnInit {
+  ngOnInit(): void {
+    throw new Error("Method not implemented.");
   }
+    // public testSubject: Store<number> = new Store<number>(0);
 
-  setName(newName: string) {
-    this._name.next(newName);
-  }
+    // ngOnInit(): void {
+    //     const observable = new Observable((subscriber) => {
+    //         subscriber.next(1);
+    //         subscriber.next(2);
+    //         subscriber.next(3);
+    //         setTimeout(() => {
+    //           subscriber.next(4);
+    //           subscriber.complete();
+    //         }, 1000);
+    //       });
+
+    //       observable.subscribe(value => this.testSubject.state = 1)
+    // }
 }
