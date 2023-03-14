@@ -1,4 +1,4 @@
-import { APP_INITIALIZER, InjectionToken, Injector, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -14,8 +14,6 @@ import { MenubarModule } from 'primeng/menubar';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { UseStore } from 'src/store/user.store';
-import { BehaviorSubject } from 'rxjs';
-import { Store } from 'src/store/store';
 
 @NgModule({
   declarations: [
@@ -37,7 +35,6 @@ import { Store } from 'src/store/store';
     InputTextModule
   ],
   providers: [
-    {provide: 'Store', useClass: Store},
     UseStore
   ],
   bootstrap: [AppComponent]

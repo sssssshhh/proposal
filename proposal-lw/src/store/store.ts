@@ -2,20 +2,20 @@ import { Inject, Injectable } from "@angular/core";
 import { BehaviorSubject, Observable } from "rxjs";
 
 @Injectable()
-export class Store {
-  public state$: Observable<string>;
-  private _state$: BehaviorSubject<string>;
+export class Store<T> {
+  public state$: Observable<T>;
+  private _state$: BehaviorSubject<T>;
 
-  constructor(@Inject('PRODUCT_SERVICE') public value: string){
-    this._state$ = new BehaviorSubject(value);
+  constructor(@Inject(null) private initialState: T){
+    this._state$ = new BehaviorSubject(initialState);
     this.state$ = this._state$.asObservable();
   }
 
-  get state(): string {
+  get state(): T {
     return this._state$.getValue();
   }
 
-  set state(value: string) {
+  set state(value: T) {
     this._state$.next(value);
   }
 }

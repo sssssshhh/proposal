@@ -9,10 +9,9 @@ import { UseStore } from 'src/store/user.store';
 export class MainComponent implements OnInit {
 
   constructor(private userStore: UseStore){
-
   }
 
   ngOnInit(): void {
-    // console.log(this.userStore.testSubject)
+    this.userStore.testSubject$.subscribe(value => console.log('test', value))
   }
 }
